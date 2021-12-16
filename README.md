@@ -17,7 +17,7 @@
    
     1.6 Once the task is created it supposed to be in suspended state so that's why we are using .resume to start the task
     
-  2. Repo.swift
+   2. Repo.swift
 
      2.1 Create owner struct with preperty for the owner name and adapt from Codable.
      
@@ -73,5 +73,25 @@
     7.1 Add the labels and the imageView
     7.2 Set the outlets
     
-
+  ## Fourth Commit  
+  
+   8. Go to **Extenions** :
+  
+    8.1 Create UIImage Extension and create a function takes string as a parameter
+    8.2 Make sure that url is existed
+    8.3 Use GlobalQueue to make sure that images are being downloaded in the background + Weak self to avoid memory leak
+    8.4 check on data and image
+    8.5 assign the image + Using main queue to avoid errors due to undifiend or unexpected behavior that it may try to access the image but can't find it.
+    8.6 I have faced an issue so the images weren't being set correctly so I have saved them using NSCache
+    8.7 getting the image from the cache using its own key which is the url
+    8.8 Saving the image into the cache
+    8.9 Set the imageView outlet in **RepoCell**
+    8.10 using the extension in **ReposViewController** datasource
     
+   9. Create viewcontroller for RepoDetails :
+  
+    9.1 Create repo var to the value into
+    9.2 Create viewController Design using scroll and stack views and setting outlets
+    9.3 Moving to the delegate in **ReposViewController** and create the didselect function and pass the instance at each time
+    9.4 Set the data using the passed instance and called it in the viewDidLoad
+  
