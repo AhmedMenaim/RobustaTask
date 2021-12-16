@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         
-        
+        // 3.6
         let windowScene:UIWindowScene = scene as! UIWindowScene
        self.window = UIWindow(windowScene: windowScene)
         
