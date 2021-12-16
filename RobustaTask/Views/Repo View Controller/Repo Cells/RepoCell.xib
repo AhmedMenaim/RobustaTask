@@ -53,6 +53,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="avatarImageViewOutlet" destination="y15-uL-uLg" id="kYX-QX-AA6"/>
                 <outlet property="lblOwnerName" destination="hvO-L4-kSA" id="kxU-dO-alH"/>
                 <outlet property="lblRepoName" destination="DPt-zL-N0Q" id="bR4-PK-Hto"/>
             </connections>

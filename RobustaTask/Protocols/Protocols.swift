@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol GetReposProtocol: AnyObject { //4.1
     func presentRepos(repos: [Repo]) // 4.2
 }
+

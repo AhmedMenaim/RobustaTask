@@ -8,7 +8,7 @@
 import UIKit
 
 class ReposViewController: UIViewController {
-
+    
     
     //MARK: - Vars
     var repoArray: [Repo] = []
@@ -22,12 +22,15 @@ class ReposViewController: UIViewController {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setTableView()
         repoPresenter.setDelegate(delegate: self) // 6.3
         repoPresenter.getRepos() //6.4
-    }
+        self.title = "Repos"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
 
+    }
+    
     
     //MARK: - Set TableView
     // 3.3
@@ -56,7 +59,11 @@ extension ReposViewController: UITableViewDataSource {
         
         if let owner = repoArray[indexPath.row].owner {
             cell.lblOwnerName.text = owner.login ?? ""
+            cell.avatarImageViewOutlet.load(urlString: owner.avatar_url ?? "") // 8.10
+
         }
+       
+                    
         
         return cell
         
@@ -68,11 +75,17 @@ extension ReposViewController: UITableViewDataSource {
 
 
 //MARK: - TableViewDelegate
-extension ReposViewController: UITableViewDelegate {
+extension ReposViewController: UITableViewDelegate { //9.3
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let repoDetailsVC = RepoDetailsViewController(nibName: "RepoDetailsViewController", bundle: nil)
+        repoDetailsVC.repo = self.repoArray[indexPath.row]
+        self.navigationController?.pushViewController(repoDetailsVC, animated: true)
+    }
 }
 
-//MARK: - Protocol Extension
+//MARK: - Protocol Extensions
 extension ReposViewController: GetReposProtocol { // 6.2
     func presentRepos(repos: [Repo]) {
         self.repoArray = repos
@@ -81,7 +94,5 @@ extension ReposViewController: GetReposProtocol { // 6.2
             self.reposTableViewOutlet.reloadData()
         }
     }
-    
-    
-    
 }
+

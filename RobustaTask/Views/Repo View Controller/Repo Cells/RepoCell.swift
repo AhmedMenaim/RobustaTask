@@ -14,4 +14,7 @@ class RepoCell: UITableViewCell {
     
     @IBOutlet weak var lblOwnerName: UILabel!
     
+    //8.9
+    @IBOutlet weak var avatarImageViewOutlet: UIImageView!
+    
 }

@@ -19,6 +19,9 @@
 		A25E8D0D276B9C2900E23592 /* ReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25E8D0B276B9C2900E23592 /* ReposViewController.xib */; };
 		A25E8D15276BA50700E23592 /* RepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8D14276BA50700E23592 /* RepoPresenter.swift */; };
 		A25E8D18276BA59E00E23592 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8D17276BA59E00E23592 /* Protocols.swift */; };
+		A25E8D1F276BC4CB00E23592 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8D1E276BC4CB00E23592 /* Extensions.swift */; };
+		A25E8D23276BD8E500E23592 /* RepoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8D21276BD8E500E23592 /* RepoDetailsViewController.swift */; };
+		A25E8D24276BD8E500E23592 /* RepoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25E8D22276BD8E500E23592 /* RepoDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		A25E8D0B276B9C2900E23592 /* ReposViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposViewController.xib; sourceTree = "<group>"; };
 		A25E8D14276BA50700E23592 /* RepoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoPresenter.swift; sourceTree = "<group>"; };
 		A25E8D17276BA59E00E23592 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		A25E8D1E276BC4CB00E23592 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A25E8D21276BD8E500E23592 /* RepoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewController.swift; sourceTree = "<group>"; };
+		A25E8D22276BD8E500E23592 /* RepoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 				A25E8D12276B9E6F00E23592 /* Presenters */,
 				A25E8D10276B9E4A00E23592 /* Services */,
 				A25E8D16276BA59200E23592 /* Protocols */,
+				A25E8D1D276BC4B500E23592 /* Extensions */,
 				A25E8CF7276B741700E23592 /* Assets.xcassets */,
 				A25E8CF9276B741700E23592 /* LaunchScreen.storyboard */,
 				A25E8CFC276B741700E23592 /* Info.plist */,
@@ -129,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				A25E8D0E276B9E1F00E23592 /* Repo View Controller */,
+				A25E8D20276BD8BA00E23592 /* Repo Details View Controller */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +147,23 @@
 				A25E8D17276BA59E00E23592 /* Protocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A25E8D1D276BC4B500E23592 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A25E8D1E276BC4CB00E23592 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A25E8D20276BD8BA00E23592 /* Repo Details View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A25E8D21276BD8E500E23592 /* RepoDetailsViewController.swift */,
+				A25E8D22276BD8E500E23592 /* RepoDetailsViewController.xib */,
+			);
+			path = "Repo Details View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +226,7 @@
 			files = (
 				A25E8CFB276B741700E23592 /* LaunchScreen.storyboard in Resources */,
 				A25E8CF8276B741700E23592 /* Assets.xcassets in Resources */,
+				A25E8D24276BD8E500E23592 /* RepoDetailsViewController.xib in Resources */,
 				A25E8D09276B921100E23592 /* RepoCell.xib in Resources */,
 				A25E8D0D276B9C2900E23592 /* ReposViewController.xib in Resources */,
 			);
@@ -214,9 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A25E8D15276BA50700E23592 /* RepoPresenter.swift in Sources */,
+				A25E8D1F276BC4CB00E23592 /* Extensions.swift in Sources */,
 				A25E8CEF276B741700E23592 /* AppDelegate.swift in Sources */,
 				A25E8D05276B749F00E23592 /* Repo.swift in Sources */,
 				A25E8D0C276B9C2900E23592 /* ReposViewController.swift in Sources */,
+				A25E8D23276BD8E500E23592 /* RepoDetailsViewController.swift in Sources */,
 				A25E8D03276B743500E23592 /* APIService.swift in Sources */,
 				A25E8CF1276B741700E23592 /* SceneDelegate.swift in Sources */,
 				A25E8D08276B921100E23592 /* RepoCell.swift in Sources */,
