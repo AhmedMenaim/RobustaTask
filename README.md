@@ -22,4 +22,20 @@
      2.1 Create owner struct with preperty for the owner name and adapt from Codable.
      
      2.2 Creat the main struct for the response which is called Repo and add the requested properies inside it ( Note: Can't find the date in the data passed )
+  
+  ## Second Commit
+ 3. Create the design for the tableView and it's functionalities
     
+    3.1 Create a new nib file called **ReposViewController** to have a tableView and searchBar
+    
+    3.2 Take the outlets for these designs
+    
+    3.3 Set the tableViewDelegate and DataSource
+
+    3.4 Call the functions of the tabkeView Delegate and DataSource
+
+    3.5 Create a dummy xib cell to be used in the future
+
+    3.6 In AppDelegate set the **ReposViewController** as the rootViewController
+    
+    3.7 Remove the Main.storyBoard file and remove it from the app general settings and from info.Plist as well
