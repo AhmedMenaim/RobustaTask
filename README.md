@@ -17,14 +17,14 @@
    
     1.6 Once the task is created it supposed to be in suspended state so that's why we are using .resume to start the task
     
- 2. Repo.swift
+  2. Repo.swift
 
      2.1 Create owner struct with preperty for the owner name and adapt from Codable.
      
      2.2 Creat the main struct for the response which is called Repo and add the requested properies inside it ( Note: Can't find the date in the data passed )
   
   ## Second Commit
- 3. Create the design for the tableView and it's functionalities
+  3. Create the design for the tableView and it's functionalities
     
     3.1 Create a new nib file called **ReposViewController** to have a tableView and searchBar
     
@@ -39,3 +39,39 @@
     3.6 In AppDelegate set the **ReposViewController** as the rootViewController
     
     3.7 Remove the Main.storyBoard file and remove it from the app general settings and from info.Plist as well
+
+ ## Third Commit
+  4. Create Protocol to conect the presenter and ViewController together
+    
+    4.1 Protocol : GetReposProtocol
+    
+    4.2 This protocol holds one function for now to retrive the data of repos -> presentRepos
+    
+   5. Create RepoPresenter
+   
+    5.1 Create typealias called **RepoPresenter** to be combination between viewController & my protocol to be able to use it in the future on my viewController.
+
+    5.2 Create a weak var delegate from this typealias to be used
+    
+    5.3 Create a function to get the repos from my service
+    
+    5.4 Call the APIService function and present the data
+    
+    5.5 Call the delegate function to present repos
+    
+    5.6 Set the delegate 
+    
+   6. Back to **ReposViewController** :
+  
+    6.1 Create a lazy var from the presenter ( Lazy as I don't need to use it untill It's called )
+    6.2 Just conform to the protocol and set my array + Reloading the tableView
+    6.3 Set the delegate
+    6.4 call the getRepo function from the presenter
+    
+   7. Go to **RepoCell** :
+  
+    7.1 Add the labels and the imageView
+    7.2 Set the outlets
+    
+
+    
