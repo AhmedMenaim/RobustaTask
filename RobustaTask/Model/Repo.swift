@@ -6,18 +6,14 @@
 //
 
 import Foundation
-
-//struct RepoResponse: Codable {
-//    var repoArray: [Repo]?
-//}
-
-struct Repo: Codable {
+    
+struct Repo: Codable { //2.2
     
     var name: String?
     var avatar_url: String?
     var owner: Owner?
 }
 
-struct Owner: Codable {
+struct Owner: Codable { //2.1
     var login: String?
 }

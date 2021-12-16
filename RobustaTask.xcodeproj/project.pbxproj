@@ -9,25 +9,29 @@
 /* Begin PBXBuildFile section */
 		A25E8CEF276B741700E23592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8CEE276B741700E23592 /* AppDelegate.swift */; };
 		A25E8CF1276B741700E23592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8CF0276B741700E23592 /* SceneDelegate.swift */; };
-		A25E8CF3276B741700E23592 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8CF2276B741700E23592 /* ViewController.swift */; };
-		A25E8CF6276B741700E23592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25E8CF4276B741700E23592 /* Main.storyboard */; };
 		A25E8CF8276B741700E23592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25E8CF7276B741700E23592 /* Assets.xcassets */; };
 		A25E8CFB276B741700E23592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25E8CF9276B741700E23592 /* LaunchScreen.storyboard */; };
 		A25E8D03276B743500E23592 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8D02276B743500E23592 /* APIService.swift */; };
 		A25E8D05276B749F00E23592 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8D04276B749F00E23592 /* Repo.swift */; };
+		A25E8D08276B921100E23592 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8D06276B921100E23592 /* RepoCell.swift */; };
+		A25E8D09276B921100E23592 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25E8D07276B921100E23592 /* RepoCell.xib */; };
+		A25E8D0C276B9C2900E23592 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8D0A276B9C2900E23592 /* ReposViewController.swift */; };
+		A25E8D0D276B9C2900E23592 /* ReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25E8D0B276B9C2900E23592 /* ReposViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A25E8CEB276B741700E23592 /* RobustaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobustaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25E8CEE276B741700E23592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A25E8CF0276B741700E23592 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A25E8CF2276B741700E23592 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A25E8CF5276B741700E23592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A25E8CF7276B741700E23592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A25E8CFA276B741700E23592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A25E8CFC276B741700E23592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A25E8D02276B743500E23592 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A25E8D04276B749F00E23592 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		A25E8D06276B921100E23592 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		A25E8D07276B921100E23592 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
+		A25E8D0A276B9C2900E23592 /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
+		A25E8D0B276B9C2900E23592 /* ReposViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +66,65 @@
 			children = (
 				A25E8CEE276B741700E23592 /* AppDelegate.swift */,
 				A25E8CF0276B741700E23592 /* SceneDelegate.swift */,
-				A25E8CF2276B741700E23592 /* ViewController.swift */,
-				A25E8D02276B743500E23592 /* APIService.swift */,
-				A25E8CF4276B741700E23592 /* Main.storyboard */,
+				A25E8D11276B9E6000E23592 /* Model */,
+				A25E8D13276B9E7A00E23592 /* Views */,
+				A25E8D12276B9E6F00E23592 /* Presenters */,
+				A25E8D10276B9E4A00E23592 /* Services */,
 				A25E8CF7276B741700E23592 /* Assets.xcassets */,
 				A25E8CF9276B741700E23592 /* LaunchScreen.storyboard */,
 				A25E8CFC276B741700E23592 /* Info.plist */,
-				A25E8D04276B749F00E23592 /* Repo.swift */,
 			);
 			path = RobustaTask;
+			sourceTree = "<group>";
+		};
+		A25E8D0E276B9E1F00E23592 /* Repo View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A25E8D0A276B9C2900E23592 /* ReposViewController.swift */,
+				A25E8D0B276B9C2900E23592 /* ReposViewController.xib */,
+				A25E8D0F276B9E3300E23592 /* Repo Cells */,
+			);
+			path = "Repo View Controller";
+			sourceTree = "<group>";
+		};
+		A25E8D0F276B9E3300E23592 /* Repo Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A25E8D06276B921100E23592 /* RepoCell.swift */,
+				A25E8D07276B921100E23592 /* RepoCell.xib */,
+			);
+			path = "Repo Cells";
+			sourceTree = "<group>";
+		};
+		A25E8D10276B9E4A00E23592 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A25E8D02276B743500E23592 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A25E8D11276B9E6000E23592 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A25E8D04276B749F00E23592 /* Repo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A25E8D12276B9E6F00E23592 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		A25E8D13276B9E7A00E23592 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A25E8D0E276B9E1F00E23592 /* Repo View Controller */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +187,8 @@
 			files = (
 				A25E8CFB276B741700E23592 /* LaunchScreen.storyboard in Resources */,
 				A25E8CF8276B741700E23592 /* Assets.xcassets in Resources */,
-				A25E8CF6276B741700E23592 /* Main.storyboard in Resources */,
+				A25E8D09276B921100E23592 /* RepoCell.xib in Resources */,
+				A25E8D0D276B9C2900E23592 /* ReposViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,25 +199,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25E8CF3276B741700E23592 /* ViewController.swift in Sources */,
 				A25E8CEF276B741700E23592 /* AppDelegate.swift in Sources */,
 				A25E8D05276B749F00E23592 /* Repo.swift in Sources */,
+				A25E8D0C276B9C2900E23592 /* ReposViewController.swift in Sources */,
 				A25E8D03276B743500E23592 /* APIService.swift in Sources */,
 				A25E8CF1276B741700E23592 /* SceneDelegate.swift in Sources */,
+				A25E8D08276B921100E23592 /* RepoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A25E8CF4276B741700E23592 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A25E8CF5276B741700E23592 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A25E8CF9276B741700E23592 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -302,7 +350,7 @@
 				INFOPLIST_FILE = RobustaTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,7 +378,7 @@
 				INFOPLIST_FILE = RobustaTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
