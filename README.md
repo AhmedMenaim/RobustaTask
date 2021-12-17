@@ -1,5 +1,8 @@
 # RobustaTask
 
+### Note1: Everything is related to the below numbers in the code depending on the written statements sequence not regarding the execustion
+### Note2: Project id documented on the second branch, You can check the demo below...
+
  ## First Commit 
  1. Creating the APIService class + Model:
  
@@ -118,3 +121,7 @@
     11.6 The normal case to add elements 
     11.7 Reloading the tableView in all cases
     11.8 Adding **scrollViewDidEndDragging** to use the created function in it and at each time I'm comparing the y posistion + height with all the content size to decide if I can scroll or not
+
+# Demo
+
+![GIF](https://user-images.githubusercontent.com/26345314/146549716-f1349cbc-496e-471b-9108-54d2234e2402.gif)
