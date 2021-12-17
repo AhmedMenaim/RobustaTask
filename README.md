@@ -95,3 +95,13 @@
     9.3 Moving to the delegate in **ReposViewController** and create the didselect function and pass the instance at each time
     9.4 Set the data using the passed instance and called it in the viewDidLoad
   
+  ## Fifth Commit  
+  
+   10. SearchBar 
+   
+    10.1 Apply the delegate on the search bar outlet (change func to be setTableViewAndSearchBar)
+    10.2 Create an array for searchedItems & Active status 
+    10.3 Use the delegate function DidChange to check on text at each time changes
+    10.4 Filtering the array with the searched text and return the range related to this filter
+    10.5 Check if there is a searchedText or not to be able to retrive the data and reload tableView in all cases
+    10.6 Changing in the data source at each time to check if search is active or not and depending on the status I will choose to return searched data or the normal one
