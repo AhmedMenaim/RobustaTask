@@ -16,6 +16,11 @@ class ReposViewController: UIViewController {
     var searchedRepo = [Repo]() // 10.2
     var searchActive = false
     
+    /// Pagination     // 11.1
+    var numberOfPages = 10
+    var limit = 10
+    var reposPaginationArray: [Repo] = []
+    
     //MARK: - Outlets
     // 3.2
     @IBOutlet weak var reposTableViewOutlet: UITableView!
@@ -55,7 +60,7 @@ extension ReposViewController: UITableViewDataSource {
             return searchedRepo.count
         }
         else {
-            return repoArray.count
+            return reposPaginationArray.count
         }
         
     }
@@ -74,9 +79,9 @@ extension ReposViewController: UITableViewDataSource {
             }
         }
         else {
-            cell.lblRepoName.text = repoArray[indexPath.row].name ?? ""
+            cell.lblRepoName.text = reposPaginationArray[indexPath.row].name ?? ""
             
-            if let owner = repoArray[indexPath.row].owner {
+            if let owner = reposPaginationArray[indexPath.row].owner {
                 cell.lblOwnerName.text = owner.login ?? ""
                 cell.avatarImageViewOutlet.load(urlString: owner.avatar_url ?? "") // 8.10
                 
@@ -98,14 +103,28 @@ extension ReposViewController: UITableViewDelegate { //9.3
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let repoDetailsVC = RepoDetailsViewController(nibName: "RepoDetailsViewController", bundle: nil)
+        
         if searchActive {
             repoDetailsVC.repo = self.searchedRepo[indexPath.row]
         }
+        
         else {
-            repoDetailsVC.repo = self.repoArray[indexPath.row]
+            repoDetailsVC.repo = self.reposPaginationArray[indexPath.row]
         }
-        repoDetailsVC.repo = self.repoArray[indexPath.row]
+                
         self.navigationController?.pushViewController(repoDetailsVC, animated: true)
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) { //11.8
+        
+        if scrollView == reposTableViewOutlet {
+                 
+                 if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height)
+                 {
+                     
+                   setPagination(numberOfPages: numberOfPages)
+                 }
+             }
     }
 }
 
@@ -113,7 +132,16 @@ extension ReposViewController: UITableViewDelegate { //9.3
 extension ReposViewController: GetReposProtocol { // 6.2
     func presentRepos(repos: [Repo]) {
         self.repoArray = repos
+        
+        //11.2
+        self.limit = self.repoArray.count
+        
+        for i in 0..<10 {
+            reposPaginationArray.append(repoArray[i])
+        }
+        
         debugPrint(self.repoArray)
+        
         DispatchQueue.main.async {
             self.reposTableViewOutlet.reloadData()
         }
@@ -144,3 +172,34 @@ extension ReposViewController: UISearchBarDelegate { //10.3
     }
 }
 
+//MARK: - Pagination
+extension ReposViewController {
+    
+    func setPagination(numberOfPages: Int) { //11.3
+        
+        //11.4
+        if numberOfPages >= limit {
+            return
+        }
+        
+        //11.5
+        else if numberOfPages >= limit - 10 {
+            for i in numberOfPages..<limit {
+                reposPaginationArray.append(repoArray[i])
+            }
+            self.numberOfPages += 10
+        }
+        
+        //11.6
+        else {
+            for i in numberOfPages..<numberOfPages + 10 {
+                reposPaginationArray.append(repoArray[i])
+            }
+            self.numberOfPages += 10
+        }
+        //11.7
+        DispatchQueue.main.async {
+            self.reposTableViewOutlet.reloadData()
+        }
+    }
+}
