@@ -29,7 +29,16 @@ class RepoDetailsViewController: UIViewController {
         setData()
     }
 
+    //MARK: - Actions
+    @IBAction func buttonOpenLink(_ sender: Any) {
+        guard let owner = repo!.owner else {return}
+        guard let url = owner.html_url else {return}
+        UIApplication.shared.open(URL(string: url)!)
+
+    }
 }
+
+//MARK: - Set Data
 
 extension RepoDetailsViewController {
     func setData () { // 9.4
@@ -45,4 +54,5 @@ extension RepoDetailsViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
     }
+        
 }

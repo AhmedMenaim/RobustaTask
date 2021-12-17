@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2557CA1276CB1220086C31B /* ReposViewController + TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2557CA0276CB1220086C31B /* ReposViewController + TableViewExtensions.swift */; };
 		A25E8CEF276B741700E23592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8CEE276B741700E23592 /* AppDelegate.swift */; };
 		A25E8CF1276B741700E23592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25E8CF0276B741700E23592 /* SceneDelegate.swift */; };
 		A25E8CF8276B741700E23592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25E8CF7276B741700E23592 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2557CA0276CB1220086C31B /* ReposViewController + TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReposViewController + TableViewExtensions.swift"; sourceTree = "<group>"; };
 		A25E8CEB276B741700E23592 /* RobustaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobustaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25E8CEE276B741700E23592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A25E8CF0276B741700E23592 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2557CA2276CB3750086C31B /* ReposViewController + TableViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A2557CA0276CB1220086C31B /* ReposViewController + TableViewExtensions.swift */,
+			);
+			path = "ReposViewController + TableViewExtensions";
+			sourceTree = "<group>";
+		};
 		A25E8CE2276B741600E23592 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 				A25E8D0A276B9C2900E23592 /* ReposViewController.swift */,
 				A25E8D0B276B9C2900E23592 /* ReposViewController.xib */,
 				A25E8D0F276B9E3300E23592 /* Repo Cells */,
+				A2557CA2276CB3750086C31B /* ReposViewController + TableViewExtensions */,
 			);
 			path = "Repo View Controller";
 			sourceTree = "<group>";
@@ -246,6 +257,7 @@
 				A25E8D0C276B9C2900E23592 /* ReposViewController.swift in Sources */,
 				A25E8D23276BD8E500E23592 /* RepoDetailsViewController.swift in Sources */,
 				A25E8D03276B743500E23592 /* APIService.swift in Sources */,
+				A2557CA1276CB1220086C31B /* ReposViewController + TableViewExtensions.swift in Sources */,
 				A25E8CF1276B741700E23592 /* SceneDelegate.swift in Sources */,
 				A25E8D08276B921100E23592 /* RepoCell.swift in Sources */,
 				A25E8D18276BA59E00E23592 /* Protocols.swift in Sources */,

@@ -13,7 +13,7 @@ class RepoPresenter { // 5
     //MARK: - Vars
     typealias RepoPresenter = GetReposProtocol & UIViewController // 5.1
     weak var delegate: RepoPresenter? // 5.2
-
+    
 }
 
 //MARK: - Get Repos
@@ -31,10 +31,9 @@ extension RepoPresenter {
             
         }
     }
-}
-
-//MARK: - Set Delegate
-extension RepoPresenter {
+    
+    //MARK: - Set Delegate
+    
     func setDelegate(delegate: RepoPresenter) { // 5.6
         self.delegate = delegate
     }
