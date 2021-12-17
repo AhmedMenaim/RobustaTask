@@ -105,3 +105,16 @@
     10.4 Filtering the array with the searched text and return the range related to this filter
     10.5 Check if there is a searchedText or not to be able to retrive the data and reload tableView in all cases
     10.6 Changing in the data source at each time to check if search is active or not and depending on the status I will choose to return searched data or the normal one
+    
+   ## Sixth Commit
+   
+   11.Pagination
+    
+    11.1 In **ReposViewController** created two variables related to pagination and reposPaginationArray to hold 10 elements increased by 10 at each scroll
+    11.2 Assigned the limit to the main repoArray count, and set the first 10 elements in reposPaginationArray
+    11.3 Create function to check at each time number of available pages 
+    11.4 Check if numberOfPages has passed the limit so will return and end the func
+    11.5 Check if numberOfPages greater than or equal the limit - 10 -> (Last 10 elements will be added)
+    11.6 The normal case to add elements 
+    11.7 Reloading the tableView in all cases
+    11.8 Adding **scrollViewDidEndDragging** to use the created function in it and at each time I'm comparing the y posistion + height with all the content size to decide if I can scroll or not
